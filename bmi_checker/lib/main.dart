@@ -55,9 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
       ),
       body: Container(
-        color: bgcolor,
+
         child: Center(
           child: Container(
+            color: bgcolor,
+            height: 500,
             width: 300,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -91,6 +93,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   keyboardType:TextInputType.number,
                 ),
+
+
                 SizedBox(height: 16,),
 
                 ElevatedButton(onPressed: (){

@@ -78,23 +78,23 @@ callback(){
 
       body:
         // ----------------------------------positioned widget-------------------
-      Container(
-        width: 300,
-        height: 400,
-        color: Colors.blue,
-        child: Stack(
-          children: [
-            Positioned(
-              bottom: 41,
-                left: 187,
-                child: Container(
-                   width: 100,
-                      height: 200,
-                        color: Colors.white,
-            ))
-          ],
-        ),
-      )
+      // Container(
+      //   width: 300,
+      //   height: 400,
+      //   color: Colors.blue,
+      //   child: Stack(
+      //     children: [
+      //       Positioned(
+      //         bottom: 41,
+      //           left: 187,
+      //           child: Container(
+      //              width: 100,
+      //                 height: 200,
+      //                   color: Colors.white,
+      //       ))
+      //     ],
+      //   ),
+      // )
         //   ----------------------------------------------Rich Text---------------------------------------
         // RichText(text:  TextSpan(
         //   style: TextStyle(
@@ -122,9 +122,7 @@ callback(){
     //       ],
     //     ),
     //   )
-    );
-  }
-}
+
       //   ---------------------------SizeBox--------------------
    // Center(
    //   child: SizedBox.square(
@@ -584,50 +582,50 @@ callback(){
 
 //=====================================Expanded widget ==============================================================
 
-// Padding(
-//   padding: const EdgeInsets.all(8.0),
-//
-//     child: Row(
-//       children: [
-//         Expanded(
-//
-//           child: Container(
-//             width: 145,
-//             height: 65,
-//             color: Colors.orange,
-//           ),
-//         ),
-//
-//         Expanded(
-//           flex: 2,
-//           child: Container(
-//             width: 145,
-//             height: 65,
-//             color: Colors.blue,
-//           ),
-//         ),
-//         Expanded(
-//           flex: 4,
-//           child: Container(
-//             width: 245,
-//             height: 65,
-//             color: Colors.green,
-//           ),
-//         ),
-//         Expanded(
-//           flex: 1,
-//           child: Container(
-//             width: 245,
-//             height: 65,
-//             color: Colors.orange,
-//           ),
-//         ),
-//
-//
-//       ],
-//     ),
-//
-// ),
+Padding(
+  padding: const EdgeInsets.all(8.0),
+
+    child: Row(
+      children: [
+        Expanded(
+
+          child: Container(
+            width: 145,
+            height: 65,
+            color: Colors.orange,
+          ),
+        ),
+
+        Expanded(
+          flex: 2,
+          child: Container(
+            width: 145,
+            height: 65,
+            color: Colors.blue,
+          ),
+        ),
+        Expanded(
+          flex: 4,
+          child: Container(
+            width: 245,
+            height: 65,
+            color: Colors.green,
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            width: 245,
+            height: 65,
+            color: Colors.orange,
+          ),
+        ),
+
+
+      ],
+    ),
+
+),
 
 
 
@@ -701,7 +699,7 @@ callback(){
         //     child: Container(
         //       width: 150,
         //       height: 100,
-        //       color: Colors.lightBlueAccent,
+        //       color: Colors.lightBlueAccent,jhgfdd iuytrewq
         //     ),
         //   ),
         // )
@@ -837,10 +835,10 @@ callback(){
 
 
 //--------------------------   image   ------------------------------------
-      //  Center(child: Container(
-      //      height: 200,
-      //      width: 300,
-      //      child: Image.asset("Assets/images/flutter.png")))
+//        Center(child: Container(
+//            height: 200,
+//            width: 300,
+//            child: Image.asset("Assets/images/flutter.png")))
 
       //--------------------------   text button------------------------------------
 
@@ -855,34 +853,32 @@ callback(){
 
 
       //------------------------     Elevated button------------------------------------
-      // ElevatedButton
-      //   (
-      //   child: Text("click here"),
-      //   onPressed: (){
-      //     print("elevated button tapped");
-      //   },)
+      // Center(
+      //   child: ElevatedButton
+      //     (
+      //     child: Text("click here"),
+      //     onPressed: (){
+      //       print("elevated button tapped");
+      //     },),
+      // )
 
 
       // -------------------------------    Outlined button------------------------------------
-      // OutlinedButton
-      //   (
-      //   child: Text("click here"),
-      //   onPressed: (){
-      //     print(" outlined button tapped");
-      //   },)
+      // Center(
+      //   child: OutlinedButton
+      //     (
+      //     child: Text("click here"),
+      //     onPressed: (){
+      //       print(" outlined button tapped");
+      //     },),
+      // )
 
 
 
       // -------------------------------container ,text design------------------------------------------
-      // Center(
-      //   child:Container(
-      //     width: 100,
-      //     height: 200,
-      //     color: Colors.lightBlueAccent,
-      //     child: Center(child: Text("helloo",style: TextStyle(fontSize: 45,backgroundColor: Colors.black, color: Colors.white),)),
-      //   ) ,
-      //
-      // )
+
+
+
 
 
 
@@ -912,3 +908,75 @@ callback(){
 //       ],
 //     ),
 // )
+//--------------------------------container-------------------------
+        // Center(
+        //   child: Container(
+        //     child: Center(
+        //       child: Container(
+        //         child: Center(child: Text("hello")),
+        //       ),
+        //     ),
+        //   ),
+        // )
+
+      //--------------------------------container2-------------------------
+      // Center(
+      // Center(
+      //  child:Container(
+      //
+      //    color: Colors.yellow,
+      //    width: 420,
+      //    height: 300,
+      //    child: Center(
+      //      child: Container(
+      //        padding: EdgeInsets.all(10),
+      //        height: 56,
+      //        width:150,
+      //        color:Colors.green,
+      //        child: Text("Abir",
+      //         style:
+      //         TextStyle(
+      //           fontSize: 35,
+      //           fontWeight: FontWeight.w700,
+      //           color:Colors.red,
+      //         ) ,),
+      //      ),
+      //    ),
+      //
+      ////--------------------------------container2-------------------------
+      //
+      // Container(
+      //
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //
+      //     children: [
+      //       Container(color: Colors.blue,width: 450,height: 100, margin: EdgeInsets.only(bottom:31),),
+      //       Container( color: Colors.black,width: 450,height: 100,margin: EdgeInsets.only(bottom:31),
+      //         child:
+      //         Center(
+      //           child: Row(
+      //             mainAxisAlignment: MainAxisAlignment.center,
+      //             crossAxisAlignment: CrossAxisAlignment.center,
+      //             children: [
+      //             Container(color: Colors.blue,width: 45,height: 100, margin: EdgeInsets.only(bottom:31),),
+      //           Container( color: Colors.yellow,width: 45,height: 100,margin: EdgeInsets.only(bottom:31),),
+      //               Container(color: Colors.blue,width: 45,height: 100, margin: EdgeInsets.only(bottom:31),),
+      //               Container( color: Colors.yellow,width: 45,height: 100,margin: EdgeInsets.only(bottom:31),),
+      //
+      //
+      //             ],
+      //
+      //           ),
+      //         ),
+      //
+      //       ),
+      //
+      //
+      //
+      //     ],
+      //   ),
+      // )
+    );
+  }
+}
