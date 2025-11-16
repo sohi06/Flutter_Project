@@ -28,19 +28,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- var _width=200.0;
- var _height=100.0;
+//  var _width=200.0;
+//  var _height=100.0;
+//
+//  var flag=true;
+//  Decoration mydecor=BoxDecoration(
+//    borderRadius: BorderRadius.circular(2),
+//    color: Colors.blueAccent,
+//
+//  );
+//--------------------------------- animated opacityy-----------------------------------
+var myopacity=1.0;
 
- var flag=true;
- Decoration mydecor=BoxDecoration(
-   borderRadius: BorderRadius.circular(2),
-   color: Colors.blueAccent,
 
- );
+var isvisible=true;
 
+
+bool isfirst=true;
 
   @override
   Widget build(BuildContext context) {
+
+
+
+
+
 
     return Scaffold(
       appBar: AppBar(
@@ -50,48 +62,98 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
 
-      // --------------------------------Foo Animation---------------------------------
+
+      //-------------------------------CrossFade Widget------------------------------------------
       body:
-        Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedContainer(
-                curve: Curves.fastOutSlowIn,
-                  width:_width,
-                  height:_height,
-                  decoration: mydecor,
-                  duration: Duration(seconds: 1)),
-              const SizedBox(height: 20),
+      AnimatedCrossFade(duration: Duration(seconds: 2),
+        firstChild:Container(
+          width: 200,
+          height: 100,
+          color: Colors.grey,
+        ) ,
+        secondChild: Image.asset("assets/images/img.png",width: 200,height: 100,),
+        // crossFadeState: CrossFadeState.showFirst,)
+          crossFadeState: isfirst?CrossFadeState.showFirst:CrossFadeState.showSecond,
+      ,
+    );}}
 
-              OutlinedButton(onPressed: (){
-                setState(() {
-                  if(flag){
-                  _width=100;
-                  _height=200;
+      // --------------------------------Foo Animation---------------------------------
+//       body:
+//         Center(
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               AnimatedContainer(
+//                 curve: Curves.fastOutSlowIn,
+//                   width:_width,
+//                   height:_height,
+//                   decoration: mydecor,
+//                   duration: Duration(seconds: 1)),
+//               const SizedBox(height: 20),
+//
+//               OutlinedButton(onPressed: (){
+//                 setState(() {
+//                   if(flag){
+//                   _width=100;
+//                   _height=200;
+//
+//                   flag=false;
+//                   mydecor=BoxDecoration(
+//                     borderRadius: BorderRadius.circular(11),
+//                     color: Colors.green,
+//                   );
+//
+//                 }
+//                   else{
+//                     _width=200;
+//                     _height=100;
+//
+//                     mydecor=BoxDecoration(
+//                         borderRadius: BorderRadius.circular(2),
+//                       color: Colors.greenAccent,
+//                     );
+//                     flag=true;
+//                   }
+//                 });
+//               }, child:Text("Animation"))
+//             ],
+//           ),
+//         )
+//     );
+//   }
+// }
 
-                  flag=false;
-                  mydecor=BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: Colors.green,
-                  );
 
-                }
-                  else{
-                    _width=200;
-                    _height=100;
 
-                    mydecor=BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                      color: Colors.greenAccent,
-                    );
-                    flag=true;
-                  }
-                });
-              }, child:Text("Animation"))
-            ],
-          ),
-        )
-    );
-  }
-}
+  //----------------------------------animated opacity-invisible container----------------------------------------
+  //   body:
+  //     Center(
+  //       child: Column(
+  //         mainAxisAlignment: MainAxisAlignment.center,
+  //         children:[
+  //           AnimatedOpacity(opacity: myopacity, duration: Duration(seconds:1 ),curve: Curves.fastOutSlowIn,
+  //           child: Container(
+  //             width: 200,
+  //             height: 100,
+  //             color: Colors.lightGreenAccent,
+  //           ),),
+  //           ElevatedButton(onPressed: (){
+  //
+  //             setState(() {
+  //               if(isvisible){
+  //               myopacity=0.0;
+  //               isvisible=false;
+  //               }
+  //               else{
+  //                 myopacity=1.0;
+  //                 isvisible=true;
+  //               }
+  //             });
+  //
+  //           }, child: Text("Close"))
+  //
+  //         ]
+  //       ),
+  //     )
+  //     ,);}}
+    
