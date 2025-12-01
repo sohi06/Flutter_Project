@@ -6,14 +6,19 @@ import 'package:weather_app/hourly_forecast.dart';
 import 'additional_information.dart';
 import 'package:http/http.dart';
 
-class WeatherScreen extends StatelessWidget{
+class WeatherScreen extends StatefulWidget{
+  @override
+  State<WeatherScreen> createState() => _WeatherScreenState();
+}
+
+class _WeatherScreenState extends State<WeatherScreen> {
   Future getCurrentWeather() async{
- http.get(
-   Uri.parse(uri),
+    String cityname='London';
+   final res=await http.get(
+   Uri.parse('https://http://api.openweathermap.org/data/2.5/weather?q=$cityname&APPID=e29e1e214e0a75c89a5552a62a000412'),
  );
-
+ print(res)
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -167,7 +172,7 @@ body:
      ),
    );
   }
-  }
+}
 
 
 
